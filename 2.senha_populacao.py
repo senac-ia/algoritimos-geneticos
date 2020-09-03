@@ -1,8 +1,8 @@
 import random
 
-meta = "ASFDGHSKYREBG578T2HYGIW74Y5W7"
+meta = "h6fAdfSF356D4Gwrd4"
 
-CARACTERES = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+CARACTERES = "abcdefghijklmnopqrsuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 def faz_lista_inicial():
     lista = []
@@ -24,26 +24,25 @@ def mutar(lista):
     nova_lista[indice] = novo_digito
     return nova_lista
 
+def selecao(lista):
+    nova_lista = sorted(lista, key=fitness, reverse=True)
+    return nova_lista[0:10]
+
 print('Iniciando...')
 random.seed()
-melhor_lista = faz_lista_inicial()
-melhor_nota = fitness(melhor_lista)
 
-tentativas = 0
-print(''.join(melhor_lista), melhor_nota, tentativas)
+# pooulação inicial
+populacao = [faz_lista_inicial() for _ in range(0,10)]
 
+geracoes = 0
 while True:
-    lista_nova = mutar(melhor_lista)
-    nota_nova = fitness(lista_nova)
-    tentativas += 1
+    lista_mutada = [mutar(individuo) for individuo in populacao]
+    populacao = selecao(populacao + lista_mutada)
 
-    if nota_nova <= melhor_nota:
-        continue
-    
-    print(''.join(lista_nova), nota_nova, tentativas)
-    if nota_nova == len(meta):
+    geracoes += 1
+    if geracoes % 50 == 0:
+        print(''.join(populacao[0]), geracoes)
+    # critério de parada
+    if fitness(populacao[0]) == len(meta):
         break
-    
-    melhor_lista = list(lista_nova)
-    melhor_nota = nota_nova
 print('Finalizado!')
