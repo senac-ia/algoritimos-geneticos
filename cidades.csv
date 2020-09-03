@@ -1,182 +1,91 @@
-Escondidos,Santa Paula,8,936
-Escondidos,Campos,3,246
-Escondidos,Riacho de Fevereiro,3,282
-Escondidos,Algas,10,670
-Escondidos,Além-do-Mar,2,204
-Escondidos,Guardião,3,207
-Escondidos,Foz da Água Quente,7,385
-Escondidos,Leão,7,777
-Escondidos,Granada,3,369
-Escondidos,Lagos,5,645
-Escondidos,Ponte-do-Sol,8,952
-Escondidos,Porto,1,131
-Escondidos,Limões,2,180
-Santa Paula,Escondidos,9,1053
-Santa Paula,Campos,8,928
-Santa Paula,Riacho de Fevereiro,1,83
-Santa Paula,Algas,8,832
-Santa Paula,Além-do-Mar,3,255
-Santa Paula,Guardião,8,1168
-Santa Paula,Foz da Água Quente,7,490
-Santa Paula,Leão,10,920
-Santa Paula,Granada,6,654
-Santa Paula,Lagos,3,429
-Santa Paula,Ponte-do-Sol,1,100
-Santa Paula,Porto,5,700
-Santa Paula,Limões,4,560
-Campos,Escondidos,4,404
-Campos,Santa Paula,9,468
-Campos,Riacho de Fevereiro,10,1100
-Campos,Algas,6,318
-Campos,Além-do-Mar,1,140
-Campos,Guardião,9,927
-Campos,Foz da Água Quente,3,303
-Campos,Leão,2,112
-Campos,Granada,2,266
-Campos,Lagos,1,84
-Campos,Ponte-do-Sol,10,1060
-Campos,Porto,10,1330
-Campos,Limões,8,1104
-Riacho de Fevereiro,Escondidos,9,639
-Riacho de Fevereiro,Santa Paula,6,432
-Riacho de Fevereiro,Campos,2,266
-Riacho de Fevereiro,Algas,2,240
-Riacho de Fevereiro,Além-do-Mar,7,826
-Riacho de Fevereiro,Guardião,1,73
-Riacho de Fevereiro,Foz da Água Quente,9,603
-Riacho de Fevereiro,Leão,2,208
-Riacho de Fevereiro,Granada,6,606
-Riacho de Fevereiro,Lagos,10,1440
-Riacho de Fevereiro,Ponte-do-Sol,2,180
-Riacho de Fevereiro,Porto,7,763
-Riacho de Fevereiro,Limões,10,1190
-Algas,Escondidos,1,59
-Algas,Santa Paula,7,623
-Algas,Campos,8,1128
-Algas,Riacho de Fevereiro,4,228
-Algas,Além-do-Mar,2,216
-Algas,Guardião,5,385
-Algas,Foz da Água Quente,5,595
-Algas,Leão,9,684
-Algas,Granada,7,476
-Algas,Lagos,10,860
-Algas,Ponte-do-Sol,10,1410
-Algas,Porto,5,525
-Algas,Limões,3,429
-Além-do-Mar,Escondidos,7,518
-Além-do-Mar,Santa Paula,4,288
-Além-do-Mar,Campos,10,1070
-Além-do-Mar,Riacho de Fevereiro,7,350
-Além-do-Mar,Algas,7,357
-Além-do-Mar,Guardião,5,565
-Além-do-Mar,Foz da Água Quente,4,476
-Além-do-Mar,Leão,9,1008
-Além-do-Mar,Granada,10,1020
-Além-do-Mar,Lagos,2,250
-Além-do-Mar,Ponte-do-Sol,3,225
-Além-do-Mar,Porto,8,584
-Além-do-Mar,Limões,5,300
-Guardião,Escondidos,2,194
-Guardião,Santa Paula,7,903
-Guardião,Campos,8,1088
-Guardião,Riacho de Fevereiro,7,574
-Guardião,Algas,9,639
-Guardião,Além-do-Mar,2,206
-Guardião,Foz da Água Quente,3,450
-Guardião,Leão,5,320
-Guardião,Granada,8,664
-Guardião,Lagos,10,1170
-Guardião,Ponte-do-Sol,1,142
-Guardião,Porto,5,590
-Guardião,Limões,10,600
-Foz da Água Quente,Escondidos,3,273
-Foz da Água Quente,Santa Paula,2,242
-Foz da Água Quente,Campos,7,651
-Foz da Água Quente,Riacho de Fevereiro,8,840
-Foz da Água Quente,Algas,6,738
-Foz da Água Quente,Além-do-Mar,2,192
-Foz da Água Quente,Guardião,6,774
+Escondidos,Santa Paula,6,780
+Escondidos,Campos,5,350
+Escondidos,Riacho de Fevereiro,1,65
+Escondidos,Algas,7,658
+Escondidos,Além-do-Mar,5,535
+Escondidos,Guardião,6,840
+Escondidos,Foz da Água Quente,5,440
+Escondidos,Leão,3,186
+Escondidos,Granada,7,413
+Escondidos,Lagos,5,675
+Escondidos,Ponte-do-Sol,9,504
+Escondidos,Porto,6,624
+Escondidos,Limões,3,261
+Santa Paula,Campos,4,404
+Santa Paula,Riacho de Fevereiro,8,1192
+Santa Paula,Algas,5,370
+Santa Paula,Além-do-Mar,6,780
+Santa Paula,Guardião,9,693
+Santa Paula,Foz da Água Quente,3,390
+Santa Paula,Leão,10,830
+Santa Paula,Granada,4,248
+Santa Paula,Lagos,8,512
+Santa Paula,Ponte-do-Sol,3,390
+Santa Paula,Porto,4,320
+Santa Paula,Limões,10,850
+Campos,Riacho de Fevereiro,6,828
+Campos,Algas,3,369
+Campos,Além-do-Mar,2,118
+Campos,Guardião,8,944
+Campos,Foz da Água Quente,5,610
+Campos,Leão,3,234
+Campos,Granada,2,294
+Campos,Lagos,2,168
+Campos,Ponte-do-Sol,2,252
+Campos,Porto,9,1017
+Campos,Limões,8,1200
+Riacho de Fevereiro,Algas,5,485
+Riacho de Fevereiro,Além-do-Mar,6,360
+Riacho de Fevereiro,Guardião,10,750
+Riacho de Fevereiro,Foz da Água Quente,10,1390
+Riacho de Fevereiro,Leão,4,536
+Riacho de Fevereiro,Granada,8,856
+Riacho de Fevereiro,Lagos,3,201
+Riacho de Fevereiro,Ponte-do-Sol,7,931
+Riacho de Fevereiro,Porto,2,160
+Riacho de Fevereiro,Limões,5,330
+Algas,Além-do-Mar,5,440
+Algas,Guardião,9,936
+Algas,Foz da Água Quente,2,174
+Algas,Leão,5,365
+Algas,Granada,8,1192
+Algas,Lagos,3,435
+Algas,Ponte-do-Sol,5,320
+Algas,Porto,6,546
+Algas,Limões,3,432
+Além-do-Mar,Guardião,7,833
+Além-do-Mar,Foz da Água Quente,2,292
+Além-do-Mar,Leão,1,97
+Além-do-Mar,Granada,6,582
+Além-do-Mar,Lagos,1,147
+Além-do-Mar,Ponte-do-Sol,4,332
+Além-do-Mar,Porto,7,763
+Além-do-Mar,Limões,5,645
+Guardião,Foz da Água Quente,9,981
+Guardião,Leão,1,60
+Guardião,Granada,10,680
+Guardião,Lagos,9,603
+Guardião,Ponte-do-Sol,1,74
+Guardião,Porto,7,455
+Guardião,Limões,8,1088
 Foz da Água Quente,Leão,7,567
-Foz da Água Quente,Granada,2,110
-Foz da Água Quente,Lagos,1,147
-Foz da Água Quente,Ponte-do-Sol,9,918
-Foz da Água Quente,Porto,6,360
-Foz da Água Quente,Limões,6,552
-Leão,Escondidos,6,372
-Leão,Santa Paula,4,320
-Leão,Campos,3,333
-Leão,Riacho de Fevereiro,2,186
-Leão,Algas,3,177
-Leão,Além-do-Mar,8,440
-Leão,Guardião,5,375
-Leão,Foz da Água Quente,8,544
-Leão,Granada,10,550
-Leão,Lagos,4,552
-Leão,Ponte-do-Sol,7,700
-Leão,Porto,5,505
-Leão,Limões,5,425
-Granada,Escondidos,5,375
-Granada,Santa Paula,9,522
-Granada,Campos,8,720
-Granada,Riacho de Fevereiro,2,158
-Granada,Algas,9,459
-Granada,Além-do-Mar,6,642
-Granada,Guardião,6,756
-Granada,Foz da Água Quente,10,1000
-Granada,Leão,4,580
-Granada,Lagos,8,1016
-Granada,Ponte-do-Sol,7,567
-Granada,Porto,6,612
-Granada,Limões,2,100
-Lagos,Escondidos,9,504
-Lagos,Santa Paula,9,1242
-Lagos,Campos,3,420
-Lagos,Riacho de Fevereiro,3,351
-Lagos,Algas,9,1062
-Lagos,Além-do-Mar,8,1032
-Lagos,Guardião,2,178
-Lagos,Foz da Água Quente,8,568
-Lagos,Leão,6,480
-Lagos,Granada,2,198
-Lagos,Ponte-do-Sol,6,378
-Lagos,Porto,1,91
-Lagos,Limões,6,726
-Ponte-do-Sol,Escondidos,7,651
-Ponte-do-Sol,Santa Paula,4,344
-Ponte-do-Sol,Campos,6,522
-Ponte-do-Sol,Riacho de Fevereiro,9,477
-Ponte-do-Sol,Algas,1,56
-Ponte-do-Sol,Além-do-Mar,6,600
-Ponte-do-Sol,Guardião,9,648
-Ponte-do-Sol,Foz da Água Quente,9,765
-Ponte-do-Sol,Leão,3,336
-Ponte-do-Sol,Granada,10,610
-Ponte-do-Sol,Lagos,9,1152
-Ponte-do-Sol,Porto,3,432
-Ponte-do-Sol,Limões,1,106
-Porto,Escondidos,5,750
-Porto,Santa Paula,7,917
-Porto,Campos,3,426
-Porto,Riacho de Fevereiro,4,212
-Porto,Algas,3,441
-Porto,Além-do-Mar,9,972
-Porto,Guardião,4,528
-Porto,Foz da Água Quente,9,1242
-Porto,Leão,10,790
-Porto,Granada,2,150
-Porto,Lagos,10,720
-Porto,Ponte-do-Sol,9,513
-Porto,Limões,9,1269
-Limões,Escondidos,10,1370
-Limões,Santa Paula,10,710
-Limões,Campos,10,760
-Limões,Riacho de Fevereiro,10,910
-Limões,Algas,3,342
-Limões,Além-do-Mar,3,162
-Limões,Guardião,8,400
-Limões,Foz da Água Quente,8,824
-Limões,Leão,2,144
-Limões,Granada,1,56
-Limões,Lagos,8,1200
-Limões,Ponte-do-Sol,3,450
-Limões,Porto,1,140
+Foz da Água Quente,Granada,7,378
+Foz da Água Quente,Lagos,6,762
+Foz da Água Quente,Ponte-do-Sol,3,408
+Foz da Água Quente,Porto,4,576
+Foz da Água Quente,Limões,1,143
+Leão,Granada,1,122
+Leão,Lagos,1,147
+Leão,Ponte-do-Sol,3,168
+Leão,Porto,10,800
+Leão,Limões,9,846
+Granada,Lagos,2,174
+Granada,Ponte-do-Sol,7,1036
+Granada,Porto,3,237
+Granada,Limões,4,444
+Lagos,Ponte-do-Sol,1,130
+Lagos,Porto,10,800
+Lagos,Limões,8,952
+Ponte-do-Sol,Porto,10,1020
+Ponte-do-Sol,Limões,9,558
+Porto,Limões,9,513

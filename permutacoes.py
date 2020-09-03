@@ -21,8 +21,14 @@ perm = permutations(["Escondidos",
 random.seed()
 
 # Print the obtained permutations 
+
+visitadas = []
+
 for i in list(perm): 
+    if i in visitadas:
+        continue
     tempo = random.randint(1, 10)
     custo = tempo * random.randint(50, 150)
     a = (i[0],i[1],str(tempo),str(custo))
+    visitadas.append((i[1],i[0]))
     print(",".join(a)) 
