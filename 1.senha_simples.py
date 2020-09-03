@@ -2,7 +2,7 @@ import random
 
 meta = "h6fAdfSF356D4Gwrd4fgSKYRfgEBG578T2HYGIW74Y5W7"
 
-CARACTERES = "abcdefghijklmnopqrsuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+CARACTERES = "abcdefghijklmnopqrsuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !@#$%ˆ&*()-=+[];:,.<>/?~\{\}\\|_"
 
 def faz_lista_inicial():
     lista = []
