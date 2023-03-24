@@ -16,7 +16,8 @@ class Populacao:
   def crossover(self):
     raise NotImplementedError("Implementar")
 
-  def selecionar(self):
+  def selecionar(self, populacao1, populacao2):
+    self.populacao = self.populacao + populacao1 + populacao2
     nova_lista = sorted(self.populacao, key=self.fitness, reverse=True)
     self.populacao = nova_lista[0:10]
 
@@ -55,14 +56,16 @@ class AlgoritmoGeneticoPopulacao:
 
     while True:
       if self.geracoes <= self.geracoes_max and self.erro > self.erro_min:
-        novo_individuo = self.individuo.mutacao()
-        fitness = novo_individuo.fitness()
+        populacao_mutada = self.populacao.mutacao()
+        populacao_crossover = self.populacao.crossover()
+        self.populacao.selecionar(populacao_mutada, populacao_crossover)
+        fitness = self.populacao.top_fitness()
+
         if fitness < ultimo_fitness:
           self.erro = abs(fitness - ultimo_fitness)
           ultimo_fitness = fitness
-          self.individuo = novo_individuo
         self.geracoes += 1
         if self.geracoes % 5000 == 0: print(f"Geração: {self.geracoes}, Erro: {self.erro}")
       else:
         break
-    return self.individuo
+    return self.populacao.top_individuo()
