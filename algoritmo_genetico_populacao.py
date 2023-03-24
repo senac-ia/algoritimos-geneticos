@@ -28,29 +28,9 @@ class Populacao:
 
   def top_fitness(self):
     return self.fitness(self.populacao[0])
-
-  def erro_final(self):
-    return self.erro
-
-  def qtd_geracoes(self):
-    return self.geracoes
-    
-  def rodar(self):
-    self.gerar_populacao()
-
-    while True:
-      if self.geracoes <= self.geracoes_max and self.erro > self.erro_min:
-        
-        nova_polucao = self.mutacao()
-        self.populacao = nova_polucao + nova_polucao
-        self.selecionar()
-        self.erro = abs(self.top_fitness() - self.populacao[0].fitness())
-
-        self.geracoes += 1
-        if self.geracoes % 5000 == 0: print(f"Geração: {self.geracoes}, Erro: {self.erro}")
-      else:
-        break
-      return self.populacao[0]
+  
+  def top_individuo(self):
+    return self.populacao[0]
 
 class Individuo:
   pass
@@ -71,7 +51,7 @@ class AlgoritmoGeneticoPopulacao:
     return self.geracoes
     
   def rodar(self):
-    ultimo_fitness = self.individuo.fitness() 
+    ultimo_fitness = self.populacao.top_fitness() 
 
     while True:
       if self.geracoes <= self.geracoes_max and self.erro > self.erro_min:
@@ -85,5 +65,4 @@ class AlgoritmoGeneticoPopulacao:
         if self.geracoes % 5000 == 0: print(f"Geração: {self.geracoes}, Erro: {self.erro}")
       else:
         break
-      return self.individuo
-
+    return self.individuo
