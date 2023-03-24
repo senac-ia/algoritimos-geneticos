@@ -37,9 +37,10 @@ class AlgoritmoGeneticoIndividuo:
           self.erro = abs(fitness - ultimo_fitness)
           ultimo_fitness = fitness
           self.individuo = novo_individuo
+        
         self.geracoes += 1
         if self.geracoes % 5000 == 0: print(f"Geração: {self.geracoes}, Erro: {self.erro}")
       else:
         break
-      return self.individuo
+    return self.individuo
 
