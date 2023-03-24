@@ -11,7 +11,7 @@ class Individuo:
   def crossover(self):
     raise NotImplementedError("Implementar")
 
-class AlgoritmoGeneticoSimples:
+class AlgoritmoGeneticoIndividuo:
   def __init__(self, individuo, geracoes_max=GERACOES_MAX,
                           erro_min=ERRO_MIN):
     self.individuo = individuo

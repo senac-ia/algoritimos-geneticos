@@ -1,8 +1,8 @@
 from tiro import Tiro
-from algoritmo_genetico import AlgoritmoGeneticoSimples
+from algoritmo_genetico_individuo import AlgoritmoGeneticoIndividuo
 
 individuo = Tiro()
-genetico = AlgoritmoGeneticoSimples(individuo)
+genetico = AlgoritmoGeneticoIndividuo(individuo)
 
 print("Primeiro indivíduo:")
 print(individuo.imprime())
