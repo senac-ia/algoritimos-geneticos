@@ -1,44 +1,6 @@
 GERACOES_MAX = 100000
 ERRO_MIN = 0.1
 
-class Populacao:
-  def __init__(self, populacao = []):
-    self.populacao = populacao
-    self.fitness = 0
-
-  def fitness_populacao(self, individuo):
-    return individuo.fitness()
-
-  def mutacao(self):
-    nova_lista = []
-    for individuo in self.populacao:
-      nova_lista.append(individuo.mutacao())
-    return nova_lista
-
-  def crossover(self):
-    raise NotImplementedError("Implementar")
-
-  def selecionar(self, populacao1, populacao2):
-    self.populacao = self.populacao + populacao1 + populacao2
-    nova_lista = sorted(self.populacao, key=self.fitness_populacao, reverse=True)
-    self.populacao = nova_lista[0:10]
-
-  def gerar_populacao(self):
-    self.populacao = []
-
-    for i in range(self.tamanho):
-      self.populacao.append(Individuo())
-
-  def top_fitness(self):
-    top_individuo = self.populacao[0]
-    return top_individuo.fitness()
-  
-  def top_individuo(self):
-    return self.populacao[0]
-
-class Individuo:
-  pass
-
 class AlgoritmoGeneticoPopulacao:
   def __init__(self, populacao, geracoes_max=GERACOES_MAX,
                           erro_min=ERRO_MIN):

@@ -1,16 +1,6 @@
 GERACOES_MAX = 100000
 ERRO_MIN = 0.1
 
-class Individuo:
-  def fitness(self):
-    raise NotImplementedError("Implementar")
-
-  def mutacao(self):
-    raise NotImplementedError("Implementar")
-
-  def crossover(self):
-    raise NotImplementedError("Implementar")
-
 # class AlgoritmoGeneticoIndividuo:
 #   def __init__(self, individuo, geracoes_max=GERACOES_MAX,
 #                           erro_min=ERRO_MIN):

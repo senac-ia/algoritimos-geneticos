@@ -17,7 +17,7 @@ from geneticos.algoritmo_genetico_populacao import AlgoritmoGeneticoPopulacao
 # print(f"Erro: {genetico.erro_final()}")
 # print(individuo_adaptado.imprime())
 
-populacao = PopTiros([Tiro()]*10)
+populacao = PopTiros(Tiro,10)
 genetico = AlgoritmoGeneticoPopulacao(populacao)
 
 individuo_adaptado = genetico.rodar()

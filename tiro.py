@@ -1,6 +1,6 @@
 import math
 import random
-from geneticos.algoritmo_genetico_individuo import Individuo
+from geneticos.individuo import Individuo
 
 class Tiro(Individuo):
   GRAVIDADE = 9.80665  # m/sˆ2
