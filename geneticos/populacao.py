@@ -21,8 +21,7 @@ class Populacao:
     self.populacao = nova_lista[0:10]
 
   def top_fitness(self):
-    top_individuo = self.populacao[0]
-    return top_individuo.fitness()
+    return self.top_individuo().fitness()
   
   def top_individuo(self):
     return self.populacao[0]

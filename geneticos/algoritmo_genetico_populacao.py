@@ -1,4 +1,4 @@
-GERACOES_MAX = 100000
+GERACOES_MAX = 100
 ERRO_MIN = 0.1
 
 class AlgoritmoGeneticoPopulacao:
@@ -17,20 +17,22 @@ class AlgoritmoGeneticoPopulacao:
     return self.geracoes
     
   def rodar(self):
-    ultimo_fitness = self.populacao.top_fitness() 
+    ultimo_fitness = self.populacao.top_fitness()
+    print(ultimo_fitness)
 
     while True:
-      if self.geracoes <= self.geracoes_max and self.erro > self.erro_min:
+      #if self.geracoes <= self.geracoes_max and self.erro > self.erro_min:
+      if self.geracoes <= self.geracoes_max:
         populacao_mutada = self.populacao.mutacao()
+
         #populacao_crossover = self.populacao.crossover()
         self.populacao.selecionar(populacao_mutada, [])
         fitness = self.populacao.top_fitness()
-
-        if fitness < ultimo_fitness:
-          self.erro = abs(fitness - ultimo_fitness)
-          ultimo_fitness = fitness
+        #if fitness <= ultimo_fitness:
+        self.erro = abs(fitness - ultimo_fitness)
+        ultimo_fitness = fitness
         self.geracoes += 1
-        if self.geracoes % 5000 == 0: print(f"Geração: {self.geracoes}, Erro: {self.erro}")
+        if self.geracoes % 1 == 0: print(f"Geração: {self.geracoes}, Erro: {self.erro}, Fitness: {fitness}")
       else:
         break
     return self.populacao.top_individuo()

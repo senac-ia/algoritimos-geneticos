@@ -28,10 +28,14 @@ class Tiro(Individuo):
   # usando VARIACAO_THETA e VARIACAO_VELOCIDADE
   # algo com random.uniform(min, max)
   def mutacao(self):
-    theta = self.theta + random.uniform(-5 * self.VARIACAO_THETA,
-                                        10 * self.VARIACAO_THETA)
-    velocidade = self.velocidade + random.uniform(self.VARIACAO_VELOCIDADE,
-                                                  self.VARIACAO_VELOCIDADE)
+    theta = -1
+    velocidade = -1
+    while theta < self.THETA_MIN or theta > self.THETA_MAX:
+      theta = self.theta + random.uniform(-10 * self.VARIACAO_THETA,
+                                          10 * self.VARIACAO_THETA)
+    while velocidade < self.VELOCIDADE_MIN or velocidade > self.VELOCIDADE_MAX:
+      velocidade = self.velocidade + random.uniform(-2 * self.VARIACAO_VELOCIDADE,
+                                                    2 * self.VARIACAO_VELOCIDADE)
 
     return Tiro(theta, velocidade)
 
