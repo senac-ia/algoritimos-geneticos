@@ -2,23 +2,25 @@ GERACOES_MAX = 100000
 ERRO_MIN = 0.1
 
 class Populacao:
-  def __init__(self, tamanho = 10):
-    self.tamanho = tamanho
-    self.populacao = []
+  def __init__(self, populacao = []):
+    self.populacao = populacao
     self.fitness = 0
 
-  def fitness(self, individuo):
-    raise NotImplementedError("Implementar")
+  def fitness_populacao(self, individuo):
+    return individuo.fitness()
 
   def mutacao(self):
-    raise NotImplementedError("Implementar")
+    nova_lista = []
+    for individuo in self.populacao:
+      nova_lista.append(individuo.mutacao())
+    return nova_lista
 
   def crossover(self):
     raise NotImplementedError("Implementar")
 
   def selecionar(self, populacao1, populacao2):
     self.populacao = self.populacao + populacao1 + populacao2
-    nova_lista = sorted(self.populacao, key=self.fitness, reverse=True)
+    nova_lista = sorted(self.populacao, key=self.fitness_populacao, reverse=True)
     self.populacao = nova_lista[0:10]
 
   def gerar_populacao(self):
@@ -28,7 +30,8 @@ class Populacao:
       self.populacao.append(Individuo())
 
   def top_fitness(self):
-    return self.fitness(self.populacao[0])
+    top_individuo = self.populacao[0]
+    return top_individuo.fitness()
   
   def top_individuo(self):
     return self.populacao[0]
@@ -57,8 +60,8 @@ class AlgoritmoGeneticoPopulacao:
     while True:
       if self.geracoes <= self.geracoes_max and self.erro > self.erro_min:
         populacao_mutada = self.populacao.mutacao()
-        populacao_crossover = self.populacao.crossover()
-        self.populacao.selecionar(populacao_mutada, populacao_crossover)
+        #populacao_crossover = self.populacao.crossover()
+        self.populacao.selecionar(populacao_mutada, [])
         fitness = self.populacao.top_fitness()
 
         if fitness < ultimo_fitness:

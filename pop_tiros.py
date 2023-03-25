@@ -1,6 +1,7 @@
 import math
 import random
 from geneticos.algoritmo_genetico_individuo import Individuo
+from geneticos.algoritmo_genetico_populacao import Populacao
 
 class Tiro(Individuo):
   GRAVIDADE = 9.80665  # m/sˆ2
@@ -42,3 +43,6 @@ class Tiro(Individuo):
   def imprime(self):
     return "Theta: " + str(self.theta) + "\nVelocidade: " + str(
         self.velocidade) + "\nFitness: " + str(self.fitness())
+
+class PopTiros(Populacao):
+  pass
