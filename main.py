@@ -1,28 +1,25 @@
-from tiro import Tiro
-from pop_tiros import PopTiros
-#from geneticos.algoritmo_genetico_individuo import AlgoritmoGeneticoIndividuo
+from problemas.tiro import Tiro
+from geneticos.algoritmo_genetico_individuo import AlgoritmoGeneticoIndividuo
 from geneticos.algoritmo_genetico_populacao import AlgoritmoGeneticoPopulacao
 
-# individuo = Tiro()
-# genetico = AlgoritmoGeneticoIndividuo(individuo)
+from problemas.tiro import Tiro, PopulacaoCanhoes
 
-# print("Primeiro indivíduo:")
-# print(individuo.imprime())
-# print("\n")
+individuo = Tiro()
+genetico = AlgoritmoGeneticoIndividuo(individuo)
 
-# individuo_adaptado = genetico.rodar()
-
-# print("\nPrimeiro mais adaptado:")
-# print(f"Quantidade de gerações: {genetico.qtd_geracoes()}")
-# print(f"Erro: {genetico.erro_final()}")
-# print(individuo_adaptado.imprime())
-
-populacao = PopTiros(Tiro, 10)
-genetico = AlgoritmoGeneticoPopulacao(populacao)
-
-individuo_adaptado = genetico.rodar()
+individuo_adaptado = genetico.rodar(max_geracoes = 1000, imprimir_em_geracaoes=100)
 
 print("\nPrimeiro mais adaptado:")
 print(f"Quantidade de gerações: {genetico.qtd_geracoes()}")
 print(f"Erro: {genetico.erro_final()}")
 print(individuo_adaptado.imprime())
+
+# populacao = PopulacaoCanhoes(Tiro, tamanho_populacao=10)
+# genetico = AlgoritmoGeneticoPopulacao(populacao)
+
+# individuo_adaptado = genetico.rodar(max_geracoes = 1000, imprimir_em_geracaoes=100)
+
+# print("\nPrimeiro mais adaptado:")
+# print(f"Quantidade de gerações: {genetico.qtd_geracoes()}")
+# print(f"Erro: {genetico.erro_final()}")
+# print(individuo_adaptado.imprime())

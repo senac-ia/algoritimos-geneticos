@@ -1,10 +1,8 @@
 class Populacao:
-  def __init__(self, Individuo, tamanho=10):
-    self.populacao = [Individuo()]*tamanho
+  def __init__(self, Individuo_classe, tamanho_populacao=10):
+    self.tamanho_populacao = tamanho_populacao
+    self.populacao = [Individuo_classe()]*tamanho_populacao
     self.fitness = 0
-
-  def fitness_populacao(self, individuo):
-    return individuo.fitness()
 
   def mutacao(self):
     nova_lista = []
@@ -13,12 +11,11 @@ class Populacao:
     return nova_lista
 
   def crossover(self):
-    raise NotImplementedError("Implementar")
+    return []
 
-  def selecionar(self, populacao1, populacao2):
-    self.populacao = self.populacao + populacao1 + populacao2
-    nova_lista = sorted(self.populacao, key=self.fitness_populacao, reverse=True)
-    self.populacao = nova_lista[0:10]
+  def selecionar(self, populacao1 = [], populacao2 = []):
+    nova_lista = sorted(self.populacao, key=self._fitness_populacao, reverse=True)
+    self.populacao = nova_lista[0:self.tamanho_populacao]
 
   def top_fitness(self):
     return self.top_individuo().fitness()
@@ -26,5 +23,5 @@ class Populacao:
   def top_individuo(self):
     return self.populacao[0]
 
-class Individuo:
-  pass
+  def _fitness_populacao(self, individuo):
+    return individuo.fitness()

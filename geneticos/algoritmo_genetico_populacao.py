@@ -1,12 +1,6 @@
-GERACOES_MAX = 100
-ERRO_MIN = 0.1
-
 class AlgoritmoGeneticoPopulacao:
-  def __init__(self, populacao, geracoes_max=GERACOES_MAX,
-                          erro_min=ERRO_MIN):
+  def __init__(self, populacao):
     self.populacao = populacao
-    self.geracoes_max = geracoes_max
-    self.erro_min = erro_min
     self.erro = float('inf')
     self.geracoes = 1
 
@@ -16,23 +10,24 @@ class AlgoritmoGeneticoPopulacao:
   def qtd_geracoes(self):
     return self.geracoes
     
-  def rodar(self):
-    ultimo_fitness = self.populacao.top_fitness()
-    print(ultimo_fitness)
+  def rodar(self, max_geracoes = 1000, imprimir_em_geracaoes = 100, erro_min = 0.01):
+    print(f"Geração: {self.geracoes}, Erro: {round(self.erro,3)}, {self.populacao.top_individuo().imprime()}")
 
     while True:
-      #if self.geracoes <= self.geracoes_max and self.erro > self.erro_min:
-      if self.geracoes <= self.geracoes_max:
-        populacao_mutada = self.populacao.mutacao()
-
-        #populacao_crossover = self.populacao.crossover()
-        self.populacao.selecionar(populacao_mutada, [])
-        fitness = self.populacao.top_fitness()
-        #if fitness <= ultimo_fitness:
-        self.erro = abs(fitness - ultimo_fitness)
-        ultimo_fitness = fitness
-        self.geracoes += 1
-        if self.geracoes % 1 == 0: print(f"Geração: {self.geracoes}, Erro: {self.erro}, Fitness: {fitness}")
-      else:
+      if self.geracoes >= max_geracoes or self.erro <= erro_min:
+        print(f"Geração: {self.geracoes}, Erro: {self.erro}, {self.populacao.top_individuo().imprime()}")
         break
+
+      populacao_mutada = self.populacao.mutacao()
+      populacao_crossover = self.populacao.crossover()
+
+      self.populacao.selecionar(populacao_mutada, populacao_crossover)
+      fitness = self.populacao.top_fitness()
+
+      if (1-fitness) < self.erro:
+        self.erro = (1-fitness)
+
+      self.geracoes += 1
+      if self.geracoes % imprimir_em_geracaoes == 0: 
+        print(f"Geração: {self.geracoes}, Erro: {self.erro}, {self.populacao.top_individuo().imprime()}")
     return self.populacao.top_individuo()
